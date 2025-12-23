@@ -89,6 +89,29 @@ api/
 
 ios/ or android/
 └── [platform-specific structure: feature modules, UI flows, platform tests]
+
+# [REMOVE IF UNUSED] Option 4: Open Affiliate Monorepo (Next.js + Python + Supabase)
+web/                    # Next.js 15 frontend and API routes
+├── src/
+│   ├── app/           # App Router pages and layouts
+│   ├── components/    # React components
+│   ├── lib/           # Utility functions and Supabase client
+│   └── types/         # TypeScript type definitions
+└── tests/
+
+worker/                 # Python 3.11 PDF processing engine
+├── src/
+│   ├── api/           # FastAPI/Flask endpoints
+│   ├── pdf/           # PDF processing logic (pypdf, reportlab)
+│   └── storage/       # Supabase Storage integration
+└── tests/
+
+database/               # Supabase migrations and schema
+├── migrations/        # SQL migration files
+└── seed/              # Seed data for development
+
+docs/                   # Project documentation
+└── contracts/         # API contracts and schemas
 ```
 
 **Structure Decision**: [Document the selected structure and reference the real
